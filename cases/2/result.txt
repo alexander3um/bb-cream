@@ -1,0 +1,24 @@
+отсортировать загрузчики внутри files - 1) Forge 2) Neoforge 3) Fabric
+
+[vers][v]1.20.1:[/v][files]
+[forge][attachment=190098:realistic-cobwebs-neo_forge-2.1.0-all.jar]
+[dep]требуется установить [url=/mody-minecraft/76305-resourceful-config.html]Resourceful Config[/url][/dep][/forge]
+[fabric][attachment=190097:realistic-cobwebs-fabric-2.1.0.jar]
+[dep]требуется установить [url=/mody-minecraft/56341-fabric-api.html]Fabric API[/url] и [url=/mody-minecraft/76305-resourceful-config.html]Resourceful Config[/url][/dep][/fabric]
+[/files][/vers]
+
+
+[vers][v]1.14.4:[/v][files]
+[fabric][attachment=49632:cobwebs-1.0.1.jar]
+[dep]требуется установить [url=/mody-minecraft/56341-fabric-api.html]Fabric API[/url] и [url=/mody-minecraft/76305-resourceful-config.html]Resourceful Config[/url] [/dep][/fabric]
+[/files][/vers]
+
+
+[vers][v]1.12.2:[/v][files]
+[forge][attachment=49632:cobwebs-1.0.1.jar][/forge]
+[/files][/vers]
+
+
+[vers][v]1.10.2:[/v][files]
+[forge][attachment=49632:cobwebs-1.0.1.jar][/forge]
+[/files][/vers]
