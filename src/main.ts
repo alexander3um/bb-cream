@@ -16,9 +16,7 @@ const from = document.querySelector<HTMLTextAreaElement>(".box-from textarea");
 const to = document.querySelector<HTMLTextAreaElement>(".box-to textarea");
 
 if (!from || !to) {
-  throw new Error(
-    "Congratulations! You're the lucky winner and your prize is бан",
-  );
+  throw new Error("Браузер-то клоунский");
 }
 
 from.addEventListener("change", (event) => {
