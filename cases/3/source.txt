@@ -1,4 +1,4 @@
-[download]1.12.2: [attachment=60867:hardcorerevival_1.12.2-1.2.0.jar]
+1.12.2: [attachment=60867:hardcorerevival_1.12.2-1.2.0.jar]
 1.14.4: [attachment=59834:hardcorerevival_1.14.4-3.0.11.jar]
 [d]для [url=/mody-minecraft/54974-fabric-mod-loader-mod-yadro-dlya-114.html]Fabric[/url] + установить [url=/mody-minecraft/56341-fabric-api.html]Fabric API[/url][/d]
 1.15.2 - [attachment=69746:hardcorerevival_1.15.2-4.0.2.jar]
@@ -38,4 +38,4 @@
 [attachment=190163:hardcorerevival-neo_forge-1.20.6-15.1.0.jar]
 [d]для [url=/mody-minecraft/77411-neoforge.html]Neoforge[/url] + установить [url=/mody-minecraft/69383-balm.html]Balm[/url][/d]
 [attachment=190164:hardcorerevival-_forge-1.20.6-15.1.0.jar]
-[d]для [url=/mody-minecraft/797-minecraft-forge.html]Forge[/url] + установить [url=/mody-minecraft/69383-balm.html]Balm[/url][/d][/r][/c][/download]
+[d]для [url=/mody-minecraft/797-minecraft-forge.html]Forge[/url] + установить [url=/mody-minecraft/69383-balm.html]Balm[/url][/d][/r][/c]

@@ -1,4 +1,4 @@
-[download]1.10.2: [attachment=18808:realistic-cobwebs-1.0.1-mc1.10.2.jar]
+1.10.2: [attachment=18808:realistic-cobwebs-1.0.1-mc1.10.2.jar]
 [d]для [url=/mody-minecraft/797-minecraft-forge.html]Forge[/url][/d]
 1.12.2: [attachment=47628:realistic-cobwebs1.0.4.jar]
 [d]для [url=/mody-minecraft/797-minecraft-forge.html]Forge[/url][/d]
@@ -9,4 +9,4 @@
 [r][attachment=190097:realistic-cobwebs-fabric-2.1.0.jar]
 [d]для [url=/mody-minecraft/54974-fabric-mod-loader-mod-yadro-dlya-114.html]Fabric[/url] + установить [url=/mody-minecraft/56341-fabric-api.html]Fabric API[/url] и [url=/mody-minecraft/76305-resourceful-config.html]Resourceful Config[/url] [/d]
 [attachment=190098:realistic-cobwebs-neo_forge-2.1.0-all.jar]
-[d]для [url=/mody-minecraft/797-minecraft-forge.html]Forge[/url] + установить [url=/mody-minecraft/76305-resourceful-config.html]Resourceful Config[/url][/d][/r][/c][/download]
+[d]для [url=/mody-minecraft/797-minecraft-forge.html]Forge[/url] + установить [url=/mody-minecraft/76305-resourceful-config.html]Resourceful Config[/url][/d][/r][/c]

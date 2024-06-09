@@ -1,5 +1,7 @@
+import { parse } from "./parse/parse.ts";
+
 export const process = (input: string): string => {
-  console.log(input);
+  parse(input);
 
   return input;
 };
