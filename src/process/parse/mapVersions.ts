@@ -4,8 +4,6 @@ const versionsSeparator =
 const versionFinder = /\d+(\.\d+)+/gim;
 
 export const mapVersions = (input: string) => {
-  console.log(input);
-
   const list = input
     .split(versionsSeparator)
     .filter((line) => !!line)

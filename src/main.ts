@@ -19,7 +19,7 @@ if (!from || !to) {
   throw new Error("Браузер-то клоунский");
 }
 
-from.addEventListener("change", (event) => {
+const changeHandler = (event: Event) => {
   const target = event.target as HTMLTextAreaElement;
 
   if (target) {
@@ -32,7 +32,10 @@ from.addEventListener("change", (event) => {
       console.error(error);
     }
   }
-});
+};
+
+from.addEventListener("change", changeHandler);
+from.addEventListener("keyup", changeHandler);
 
 to.addEventListener("click", async (event) => {
   const target = event.target as HTMLTextAreaElement;
