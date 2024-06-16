@@ -50,3 +50,7 @@ body {
 .box-to textarea:active {
   opacity: 0.25;
 }
+
+.error {
+  background: rgba(255, 137, 137, 0.24);
+}

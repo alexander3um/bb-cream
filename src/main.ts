@@ -23,7 +23,13 @@ from.addEventListener("change", (event) => {
   const target = event.target as HTMLTextAreaElement;
 
   if (target) {
-    to.value = process(target.value);
+    target.classList.remove("error");
+
+    try {
+      to.value = process(target.value);
+    } catch (e: unknown) {
+      target.classList.add("error");
+    }
   }
 });
 
