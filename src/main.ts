@@ -19,17 +19,32 @@ if (!from || !to) {
   throw new Error("Браузер-то клоунский");
 }
 
+const resetError = () => {
+  from.classList.remove("error");
+  to.value = "";
+};
+
+const handleError = (error: unknown) => {
+  from.classList.add("error");
+  console.error(error);
+  to.value = error as string;
+};
+
+const handleNonBlockingError = (message: string) => {
+  from.classList.add("error");
+  console.error(message);
+};
+
 const changeHandler = (event: Event) => {
   const target = event.target as HTMLTextAreaElement;
 
   if (target) {
-    target.classList.remove("error");
+    resetError();
 
     try {
-      to.value = process(target.value);
+      to.value = process(target.value, handleNonBlockingError);
     } catch (error: unknown) {
-      target.classList.add("error");
-      console.error(error);
+      handleError(error);
     }
   }
 };
