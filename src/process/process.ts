@@ -1,9 +1,4 @@
 import { parse } from "./parse/parse.ts";
+import { render } from "./render/render.ts";
 
-export const process = (input: string): string => {
-  const versions = parse(input);
-
-  console.log(versions);
-
-  return input;
-};
+export const process = (input: string): string => render(parse(input));

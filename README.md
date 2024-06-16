@@ -1,6 +1,6 @@
 ## Рецепт плова
 
-1. Берём сначал укропу - Node.js LTS Iron
+1. Берём сначал укропу - Node.js 20
 2. Потом кошачью жопу `npm install`
 3. 25 картошек `npm run build`
 4. 12 мандавошек `npm run preview`
