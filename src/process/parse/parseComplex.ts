@@ -32,8 +32,8 @@ export const parseComplex = (version: string, input: string): Version[] => {
 
     versions.push({
       version,
-      loader: determineLoader(input),
-      dependencies: mapDependencies(version, input),
+      loader: determineLoader(match[0]),
+      dependencies: mapDependencies(version, match[0]),
       ...attachment,
     });
   }
