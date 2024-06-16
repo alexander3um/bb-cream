@@ -8,7 +8,7 @@ export const parseSimple = (version: string, input: string): Version => {
     input.split(/(?=\[d].*?\[\/d])/gim);
 
   if (!dependenciesLine) {
-    console.log("Wrong input", input);
+    throw new Error(`${version}: не понимаю что именно тут скочать`);
   }
 
   const attachment = parseAttachment(version, attachmentLine);

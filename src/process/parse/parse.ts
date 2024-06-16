@@ -5,7 +5,9 @@ import { parseSimple } from "./parseSimple.ts";
 import { parseComplex } from "./parseComplex.ts";
 
 export const parse = (input: string): Version[] => {
-  const mappedVersions = mapVersions(input);
+  const mappedVersions = mapVersions(
+    input.trim().startsWith("[download]") ? input.slice(10, -11) : input,
+  );
 
   const versions: Version[] = [];
 
