@@ -22,9 +22,8 @@ export const render = (versions: Version[]): string => {
         : "";
 
     groupedVersions[version.version] =
-      groupedVersions[version.version] ??
-      "" +
-        `[${version.loader}]${attachmentLine}${dependenciesLine}[/${version.loader}]`;
+      (groupedVersions[version.version] ?? "") +
+      `[${version.loader}]${attachmentLine}${dependenciesLine}[/${version.loader}]`;
   }
 
   const codes: string[] = [];
