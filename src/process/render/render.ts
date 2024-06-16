@@ -8,9 +8,9 @@ export const render = (versions: Version[]): string => {
 
   for (const version of sortedVersions) {
     const attachmentLine =
-      version.linkType === "attachment"
-        ? `[attachment=${version.link}]`
-        : `[url=${version.link}]${version.link}[/url]`;
+      version.link.type === "attachment"
+        ? `[attachment=${version.link.code}]`
+        : `[url=${version.link.href}]${version.link.text}[/url]`;
 
     const dependencies = version.dependencies
       .map((dependency) => `[url=${dependency.link}]${dependency.name}[/url]`)

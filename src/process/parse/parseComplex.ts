@@ -1,4 +1,4 @@
-import { Version } from "../../types.ts";
+import { Link, Version } from "../../types.ts";
 import { determineLoader } from "./determineLoader.ts";
 import { mapDependencies } from "./mapDependencies.ts";
 
@@ -6,35 +6,36 @@ export const parseComplex = (version: string, input: string): Version[] => {
   const versions: Version[] = [];
 
   const matches = input.matchAll(
-    /(\[attachment=(?<attachment>.*?)]|\[url=(?<link>.*?)].*?\[\/url])\n*(\[d](?<dependencies>.*?)\[\/d])/gim,
+    /(\[attachment=(?<attachment>.*?)]|\[url=(?<href>.*?)](?<text>.*?)\[\/url])\n*(\[d](?<dependencies>.*?)\[\/d])/gim,
   );
 
   for (const match of matches) {
-    const attachment = (() => {
+    const link: Link | undefined = (() => {
       if (match.groups?.attachment) {
         return {
-          link: match.groups?.attachment,
-          linkType: "attachment" as const,
+          type: "attachment",
+          code: match.groups?.attachment,
         };
       }
 
-      if (match.groups?.link) {
+      if (match.groups?.href && match.groups?.text) {
         return {
-          link: match.groups?.link,
-          linkType: "url" as const,
+          type: "url",
+          href: match.groups.href,
+          text: match.groups.text,
         };
       }
     })();
 
-    if (!attachment) {
+    if (!link) {
       throw new Error(`${version}: не понимаю что тут можно скочать`);
     }
 
     versions.push({
       version,
+      link,
       loader: determineLoader(match[0]),
       dependencies: mapDependencies(version, match[0]),
-      ...attachment,
     });
   }
 

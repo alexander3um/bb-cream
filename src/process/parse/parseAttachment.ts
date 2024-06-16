@@ -1,11 +1,8 @@
-import { Version } from "../../types.ts";
+import { Link } from "../../types.ts";
 
-export const parseAttachment = (
-  version: string,
-  input: string,
-): Pick<Version, "linkType" | "link"> => {
+export const parseAttachment = (version: string, input: string): Link => {
   const matches = input.matchAll(
-    /(\[attachment=(?<attachment>\d+:.*?)]|\[url=(?<link>.*?)](?<name>.*?)\[\/url])/gim,
+    /(\[attachment=(?<attachment>\d+:.*?)]|\[url=(?<href>.*?)](?<text>.*?)\[\/url])/gim,
   );
 
   const match = [...matches][0];
@@ -16,13 +13,14 @@ export const parseAttachment = (
 
   if (match.groups.attachment) {
     return {
-      linkType: "attachment",
-      link: match.groups.attachment,
+      type: "attachment",
+      code: match.groups.attachment,
     };
   }
 
   return {
-    linkType: "url",
-    link: match.groups.link,
+    type: "url",
+    href: match.groups.href,
+    text: match.groups.text,
   };
 };
