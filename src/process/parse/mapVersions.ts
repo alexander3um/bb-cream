@@ -1,7 +1,7 @@
 const versionsSeparator =
   /((?<=\[\/url]\s*\[\/d]\n|\[\/url]\s*\[\/d]\s*\[\/r]\s*\[\/c])(?!\n*\[d|\[atta)|(?<=\.jar])(?=\n*[1-9]+))/gim;
 
-const versionFinder = /\d+(\.\d+)+/gim;
+const versionFinder = /\d+(\.\d+)+/im;
 
 export const mapVersions = (input: string) => {
   const list = input
