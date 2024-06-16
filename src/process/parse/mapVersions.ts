@@ -1,5 +1,5 @@
 const versionsSeparator =
-  /((?<=\[\/url]\s*\[\/d]\n|\[\/url]\s*\[\/d]\s*\[\/r]\s*\[\/c])(?!\n*\[d|\[atta|\[url)|(?<=\.jar]|\[\/url])(?=\n*[1-9]+))/gim;
+  /((?<=\[\/url]\s*\[\/d]\n|\[\/url]\s*\[\/d]\s*\[\/r]\s*\[\/c])(?!\n*\[d|\[atta|\[url)|(?<=\.(jar|zip)]|\[\/url])(?=\n*[1-9]+|\n*\[c]\s*\[l]))/gim;
 
 const versionFinder = /\d+(\.\d+)+/im;
 
