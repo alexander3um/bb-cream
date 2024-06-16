@@ -1,7 +1,7 @@
 import { Version } from "../../types.ts";
 import { sortVersions } from "./sortVersions.ts";
 
-export const render = (versions: Version[]): string => {
+export const render = (versions: Version[]) => {
   const sortedVersions = sortVersions(versions);
 
   const groupedVersions: Record<string, string> = {};
@@ -34,5 +34,8 @@ export const render = (versions: Version[]): string => {
     );
   }
 
-  return codes.join("\n\n");
+  return {
+    output: codes.join("\n\n"),
+    count: codes.length,
+  };
 };

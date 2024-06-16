@@ -4,7 +4,7 @@ import { parseRetro } from "./parseRetro.ts";
 import { parseSimple } from "./parseSimple.ts";
 import { parseComplex } from "./parseComplex.ts";
 
-export const parse = (input: string): Version[] => {
+export const parse = (input: string) => {
   const mappedVersions = mapVersions(
     input.trim().startsWith("[download]") ? input.slice(10, -11) : input,
   );
@@ -27,5 +27,8 @@ export const parse = (input: string): Version[] => {
     versions.push(parseRetro(version, line));
   }
 
-  return versions;
+  return {
+    versions,
+    inputCount: Object.keys(mappedVersions).length,
+  };
 };
