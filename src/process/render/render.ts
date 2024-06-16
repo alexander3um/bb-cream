@@ -18,19 +18,19 @@ export const render = (versions: Version[]): string => {
 
     const dependenciesLine =
       version.dependencies.length > 0
-        ? `[dep]требуется установить ${dependencies}[/dep]`
+        ? `\n[dep]требуется установить ${dependencies}[/dep]`
         : "";
 
     groupedVersions[version.version] =
       (groupedVersions[version.version] ?? "") +
-      `[${version.loader}]${attachmentLine}${dependenciesLine}[/${version.loader}]`;
+      `\n[${version.loader}]${attachmentLine}${dependenciesLine}[/${version.loader}]`;
   }
 
   const codes: string[] = [];
 
   for (const version of Object.keys(groupedVersions)) {
     codes.push(
-      `[vers][v]${version}[/v][files]${groupedVersions[version]}[/files][/vers]`,
+      `[vers][v]${version}[/v][files]${groupedVersions[version]}\n[/files][/vers]`,
     );
   }
 
