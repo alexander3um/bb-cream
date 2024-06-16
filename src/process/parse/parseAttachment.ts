@@ -11,7 +11,7 @@ export const parseAttachment = (
   const match = [...matches][0];
 
   if (!match || !match.groups) {
-    throw new Error(`Не получилось распарсить simple скачку ${version}`);
+    throw new Error(`${version}: не понимаю что тут надо скочать`);
   }
 
   if (match.groups.attachment) {

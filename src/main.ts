@@ -27,8 +27,9 @@ from.addEventListener("change", (event) => {
 
     try {
       to.value = process(target.value);
-    } catch (e: unknown) {
+    } catch (error: unknown) {
       target.classList.add("error");
+      console.error(error);
     }
   }
 });

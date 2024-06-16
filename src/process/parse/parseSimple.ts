@@ -12,7 +12,7 @@ export const parseSimple = (version: string, input: string): Version => {
   }
 
   const attachment = parseAttachment(version, attachmentLine);
-  const dependencies = mapDependencies(dependenciesLine);
+  const dependencies = mapDependencies(version, dependenciesLine);
   const loader = determineLoader(input);
 
   return {

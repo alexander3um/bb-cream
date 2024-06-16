@@ -16,9 +16,7 @@ export const mapVersions = (input: string) => {
     const version = line.match(versionFinder);
 
     if (!version) {
-      throw new Error(
-        "Нельзя быть уверенным в результате, нахрюк система дала сбой",
-      );
+      throw new Error("Не получилось распарсить версии");
     }
 
     versions[version[0]] = line;
