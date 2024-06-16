@@ -7,7 +7,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
       <textarea></textarea>
     </div>
     <div class="box-to">
-      <textarea></textarea>
+      <textarea readonly></textarea>
     </div>
   </div> 
 `;
@@ -24,5 +24,13 @@ from.addEventListener("change", (event) => {
 
   if (target) {
     to.value = process(target.value);
+  }
+});
+
+to.addEventListener("click", async (event) => {
+  const target = event.target as HTMLTextAreaElement;
+
+  if (target) {
+    await navigator.clipboard.writeText(target.value);
   }
 });

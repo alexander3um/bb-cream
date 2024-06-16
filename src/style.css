@@ -24,6 +24,7 @@ body {
 .box-to {
   flex: 1 1 auto;
   box-sizing: border-box;
+  position: relative;
 }
 
 .box-from textarea,
@@ -38,4 +39,14 @@ body {
   font-size: 16px;
   padding: 16px 16px;
   box-sizing: border-box;
+  resize: none;
+}
+
+.box-to textarea:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.box-to textarea:active {
+  opacity: 0.25;
 }

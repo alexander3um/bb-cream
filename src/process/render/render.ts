@@ -12,5 +12,5 @@ export const render = (versions: Version[]): string => {
 
       return `[vers]${versionBbCode}[files][${version.loader}][/${version.loader}][/files][/vers]`;
     })
-    .join("\n");
+    .join("\n\n");
 };
