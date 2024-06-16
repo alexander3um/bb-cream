@@ -15,15 +15,18 @@ export const parse = (input: string): Version[] => {
     const line = mappedVersions[version];
 
     if (/\[c]\[l]\d+(\.\d+)+/gim.test(line)) {
+      console.log("First");
       versions.push(...parseComplex(version, line));
       continue;
     }
 
     if (/(\[d]|\[\/d])/gim.test(line)) {
+      console.log("Second");
       versions.push(parseSimple(version, line));
       continue;
     }
 
+    console.log("Third");
     versions.push(parseRetro(version, line));
   }
 

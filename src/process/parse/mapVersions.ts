@@ -5,6 +5,8 @@ const versionFinder = /\d+(\.\d+)+/im;
 
 export const mapVersions = (input: string) => {
   const list = input
+    .replace(/\[h]/gm, "")
+    .replace(/\[\/h]/gm, "")
     .split(versionsSeparator)
     .filter((line) => !!line)
     .map((line) => line.trim())
